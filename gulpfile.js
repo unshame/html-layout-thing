@@ -1,6 +1,6 @@
-const gulp         = require('gulp');
-const less         = require('gulp-less');
-const browserSync  = require('browser-sync');
+const gulp = require('gulp');
+const less = require('gulp-less');
+const browserSync = require('browser-sync');
 const autoprefixer = require('gulp-autoprefixer');
 
 // Автоперезагрузка при изменении файлов в папке `dist`:
@@ -13,6 +13,7 @@ gulp.task('livereload', () => {
         server: {
             baseDir: 'dist'
         },
+        browser: 'google chrome',
         files: [
             'dist/**/*.*'
         ]
@@ -21,24 +22,24 @@ gulp.task('livereload', () => {
 
 gulp.task('styles', () => {
     gulp.src('src/less/main.less')
-    .pipe(less())
-    .pipe(autoprefixer())
-    .pipe(gulp.dest('./dist/css'));
+        .pipe(less())
+        .pipe(autoprefixer())
+        .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('img', () => {
     gulp.src('src/img/**/*.*')
-    .pipe(gulp.dest('./dist/img'));
+        .pipe(gulp.dest('./dist/img'));
 });
 
 gulp.task('js', () => {
     gulp.src('src/js/**/*.*')
-    .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('html', () => {
     gulp.src('src/index.html')
-    .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist'));
 });
 
 // Отслеживание изменений в файлах, нужно только при локальной разработке
