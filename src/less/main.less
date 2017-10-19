@@ -1,5 +1,5 @@
 @import (less) 'node_modules/normalize.css/normalize.css';
-@import (less) './media';
+@import (less) './_media';
 
 // Код для примера
 body {
@@ -10,33 +10,30 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: red; // red on small devices
+    background: red;
 
+    // Стили для всех девайсов пишутся внитри блока:
     @media @tablet {
-        background: green; // green on medium devices
+        background: green;
     }
 
     @media @desktop {
-        background: blue; // blue on large devices
+        background: blue;
     }
 
+    // Пример стилей для элемента `.menu__item`
     &__item {
         display: inline-block;
         list-style-type: none;
     }
 
-    &__link {
-        color: #FFF;
-    }
-
-    // Bottom Menu
-    &_bottom { // BEM modifier example
+    // Пример модификатора `.menu_bottom`
+    &_bottom {
         background: green;
     }
 
-    &_bottom &__link {
+    // Пример переопределения стилей элемента в нижнем меню `.menu_bottom .menu__item`
+    &_bottom &__item {
         color: #f00;
     }
 }
-
-
