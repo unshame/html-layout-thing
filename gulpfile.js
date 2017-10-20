@@ -13,7 +13,6 @@ gulp.task('livereload', () => {
         server: {
             baseDir: 'dist'
         },
-        browser: 'google chrome',
         files: [
             'dist/**/*.*'
         ]
