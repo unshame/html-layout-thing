@@ -1,18 +1,17 @@
-@import (less) 'node_modules/normalize.css/normalize.css';
-@import (less) './_media';
+@import (less) '../../node_modules/normalize.css/normalize.css';
+@import (less) '_media.less';
 
-// Код для примера
 body {
-    background: #ccc;
+    background: blue;
 }
 
+// Стили для всех девайсов (все @media-запросы) пишутся внитри блока
 .menu {
     margin: 0;
     padding: 0;
     text-align: center;
     background: red;
 
-    // Стили для всех девайсов пишутся внитри блока:
     @media @tablet {
         background: green;
     }
