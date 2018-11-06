@@ -42,4 +42,4 @@
 }
 ```
 
-См. так же [руководство по БЭМ](http://academy.oggettoweb.com/learn/bem).
+См. так же [руководство по БЭМ](http://andreymiskov.ru/frontend-handbook/bem/).
