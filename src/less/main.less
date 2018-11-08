@@ -1,4 +1,152 @@
 @import (less) '../../node_modules/normalize.css/normalize.css';
 @import (less) '_media.less';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
+@max-w: 1400px;
+
+@color-bg: #FFFFFF;
+@color-section-bg: #F4F5EF;
+@color-section-border: #D9D9D4;
+@color-accent: #CE0000;
+
+@border-section: 1px solid @color-section-border;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: auto;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 100%;
+
+    background: @color-bg;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: @color-accent;
+}
+
+.header {
+    width: 100%;
+    height: 87px;
+
+    max-width: @max-w;
+
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 87px;
+    color: @color-accent;
+
+    &__title {
+        float: left;
+        font-family: 'Consolas', 'Roboto', sans-serif;
+    }
+
+    &__logo-wrapper {
+        display: inline-block;
+    }
+
+    &__contacts {
+        float: right;
+    }
+}
+
+.navigation {
+    width: 100%;
+    height: 50px;
+    border-top: @border-section;
+    border-bottom: @border-section;
+
+    text-align: center;
+
+    background: @color-section-bg;
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+        max-width: @max-w;
+        margin: auto;
+    }
+
+    &__links {
+        float: left;
+        height: 100%;
+        line-height: 50px;
+    }
+
+    &__search-wrapper {
+        height: 100%;
+        float: right;
+        padding: 6px 0;      
+    }
+
+    &__search {
+        position: relative;
+        width: 276px;
+        height: 38px;
+        background: @color-bg;
+        border: @border-section;
+    }
+
+    &__search-text-field {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding-right: 32px;
+    }
+
+    &__search-submit-button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 32px;
+        height: 36px;
+        border: 0;
+    }
+}
+
+.content {
+    flex: 1;
+
+    width: 100%;
+    max-width: @max-w;
+}
+
+.footer {
+    
+    width: 100%;
+    padding: 60px 0 100px 0;
+    border-top: @border-section;
+    background: @color-section-bg;
+    line-height: 24px;
+    font-size: 18px;
+
+    &__wrapper {
+        width: 100%;
+        max-width: @max-w;
+        margin: auto;
+    }
+
+    &__links {
+
+    }
+
+    &__summary {
+        border-top: @border-section;
+
+        padding: 40px 0;
+    }
+
+}
 

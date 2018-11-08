@@ -2,22 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>7h3 5h0p</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-<!-- Код для примера -->
 <header class="header">
-    <h1>Hello world</h1>
+    <div class="header__title">
+        <span class="header__title">7h3 5h0p</span>
+    </div>
+    <div class="header__contacts">+7 (812) 2-12-85-06</div>
+    <div class="header__logo-wrapper">
+        <img class="header__logo" src="" alt="7h3 5h0p Логотип">
+    </div>
 </header>
 
-<img src="img/pic.png" alt="">
+<nav class="navigation">
+    <div class="navigation__wrapper">
+        <div class="navigation__links">
+            <a class="navigation__link navigation__link_current" href="/Lisp">Lisp</a>
+            <a class="navigation__link" href="/OCaml">OCaml</a>
+            <a class="navigation__link" href="/JavaScript">JavaScript</a>
+            <a class="navigation__link" href="/Python">Python</a>
+            <a class="navigation__link" href="/PHP">PHP</a>
+        </div>
+        <div class="navigation__search-wrapper">
+            <form class="navigation__search">
+                <input class="navigation__search-text-field" type="text">
+                <input class="navigation__search-submit-button" type="submit">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<main class="content">
+    <nav class="breadcrumbs">
+        <a class="breadcrumb" href="/LISP">LISP</a>
+        <a class="breadcrumb" href="/Одежда">Одежда</a>
+        <a class="breadcrumb breadcrumb_current" href="/Футболки">Футболки</a>
+    </nav>
+
+    <article class="item">
+
+        <section class="item__info">
+            <h1 class="title">Футболка Программистского Юмора</h1>
+            <div class="description">Состав: 100% хлопок. Свойства: +2 скилу программирования, -5 к чувству юмора. Производство: Россия.</div>
+            <div class="price">1500Р</div>
+        </section>
+
+        <section class="item__controls">
+
+            <div class="selector item__size-selector">
+                <div class="selector__title"></div>
+            </div>
+
+            <div class="selector item__color-selector">
+                <div class="selector__title"></div>
+            </div>
+
+            <button class="buy-button item__buy-button">Купить</button>
+
+            <a class="set-aside-button item__set-aside-button"></a>
+        </section>
+
+        <figure class="item__preview"></figure>
+
+    </article>
+</main>
 
 <footer class="footer">
+    <div class="footer__wrapper">
+        <section class="footer__links">
+            <div class="footer__group footer__group_support"></div>
+            <div class="footer__group footer__group_about"></div>
+            <div class="footer__badges"></div>
+            <div class="footer__social-media"></div>
+        </section>
+        <section class="footer__summary">
+            2005-2018 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.<br>
+            Все права защищены. Доставка по всей России!
+        </section>
+    </div>
 </footer>
 
 <script src="js/scripts.js"></script>
