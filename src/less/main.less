@@ -1,38 +1,4 @@
 @import (less) '../../node_modules/normalize.css/normalize.css';
 @import (less) '_media.less';
 
-body {
-    background: blue;
-}
 
-// Стили для всех девайсов (все @media-запросы) пишутся внитри блока
-.menu {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background: red;
-
-    @media @tablet {
-        background: green;
-    }
-
-    @media @desktop {
-        background: blue;
-    }
-
-    // Пример стилей для элемента `.menu__item`
-    &__item {
-        display: inline-block;
-        list-style-type: none;
-    }
-
-    // Пример модификатора `.menu_bottom`
-    &_bottom {
-        background: green;
-    }
-
-    // Пример переопределения стилей элемента в нижнем меню `.menu_bottom .menu__item`
-    &_bottom &__item {
-        color: #f00;
-    }
-}
