@@ -10,19 +10,17 @@
 <body>
 
 <header class="header">
-    <div class="header__title">
-        <span class="header__title">7h3 5h0p</span>
+    <div class="header__title">7h3 5h0p</div>
+    <div class="header__logo-wrapper">
+        <img class="header__logo" src="./img/logo.png" alt="7h3 5h0p Логотип">
     </div>
     <div class="header__contacts">+7 (812) 2-12-85-06</div>
-    <div class="header__logo-wrapper">
-        <img class="header__logo" src="" alt="7h3 5h0p Логотип">
-    </div>
 </header>
 
 <nav class="navigation">
     <div class="navigation__wrapper">
         <div class="navigation__links">
-            <a class="navigation__link navigation__link_current" href="/Lisp">Lisp</a>
+            <a class="navigation__link navigation__link_current" href="/Lisp">LISP</a>
             <a class="navigation__link" href="/OCaml">OCaml</a>
             <a class="navigation__link" href="/JavaScript">JavaScript</a>
             <a class="navigation__link" href="/Python">Python</a>
@@ -31,7 +29,7 @@
         <div class="navigation__search-wrapper">
             <form class="navigation__search">
                 <input class="navigation__search-text-field" type="text">
-                <input class="navigation__search-submit-button" type="submit">
+                <input class="navigation__search-submit-button" type="submit" value="">
             </form>
         </div>
     </div>
@@ -39,9 +37,15 @@
 
 <main class="content">
     <nav class="breadcrumbs">
-        <a class="breadcrumb" href="/LISP">LISP</a>
-        <a class="breadcrumb" href="/Одежда">Одежда</a>
-        <a class="breadcrumb breadcrumb_current" href="/Футболки">Футболки</a>
+        <span class="breadcrumbs__wrapper">
+            <a class="breadcrumbs__link" href="/LISP">LISP</a>
+        </span>
+        <span class="breadcrumbs__wrapper">
+            <a class="breadcrumbs__link" href="/Одежда">Одежда</a>
+        </span>
+        <span class="breadcrumbs__wrapper">
+            <a class="breadcrumbs__link breadcrumbs__link_current" href="/Футболки">Футболки</a>
+        </span>
     </nav>
 
     <article class="item">
