@@ -17,9 +17,6 @@ module.exports = {
             'error',
             4
         ],
-        'prefer-const': [
-            'error'
-        ],
         'eol-last': [
             'error',
             'always'
