@@ -14,23 +14,23 @@ module.exports = {
     'extends': 'eslint:recommended',
     'rules': {
         'indent': [
-            'error',
+            'warn',
             4
         ],
         'eol-last': [
-            'error',
+            'warn',
             'always'
         ],
         'linebreak-style': [
-            'error',
+            'warn',
             'unix'
         ],
         'quotes': [
-            'error',
+            'warn',
             'single'
         ],
         'semi': [
-            'error',
+            'warn',
             'always'
         ],
         'no-unused-vars': [
