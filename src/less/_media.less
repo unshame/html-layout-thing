@@ -26,6 +26,9 @@
 @large: ~'only screen and (min-width: @{lg-min})';
 
 
+@at-most-desktop: ~'only screen and (max-width: @{md-max})';
+@at-most-tablet: ~'only screen and (max-width: @{sm-max})';
+
 // Это служебный файл, никакие стили тут писать не нужно.
 // Задача этого файла — объявить переменные для медиа-запросов.
 // Этот файл импортируется в `main.less`, переменные `@phone`, `@tablet` и пр.
