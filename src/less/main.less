@@ -2,17 +2,17 @@
 @import (less) '_media.less';
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-@max-w: 1400px;
+@max-w: 1440px;
 @content-padding: 20px;
 
 @color-bg: #FFFFFF;
 @color-section-bg: #F4F5EF;
 @color-section-border: #D9D9D4;
-@color-selector-border: #888888;
+@color-secondary: #888888;
 @color-accent: #CE0000;
 
 @border-section: 1px solid @color-section-border;
-@border-selector: 2px solid @color-selector-border;
+@border-selector: 2px solid @color-secondary;
 
 @fs-title: 36px;
 @fs-button: 28px;
@@ -45,6 +45,10 @@ body {
 
 a {
     color: @color-accent;
+}
+
+a:hover {
+    opacity: 0.78;
 }
 
 @import (less) './header.less';

@@ -63,17 +63,14 @@
 
     <article class="item">
 
-        <section class="item__preview-holder">
-            <img class="item__preview" src="./img/tee-yellow.png">
-        </section>
-
         <section class="item__info">
             <h1 class="item__info-title">Футболка Программистского Юмора</h1>
             <div class="item__info-description">Состав: 100% хлопок. Свойства: +2 к скилу программирования, -5 к чувству юмора. Производство: Россия.</div>
-            <div class="item__info-price">1500 ₽</div>
+            <div class="item__info-line">
+                <div class="item__info-price">1500 ₽</div>
+            </div>
 
-            <div class="item__controls">
-
+            <div class="item__info-line">
                 <div class="selector item__size-selector">
                     <div class="selector__title">Размер:</div>
                     <div class="selector__button-holder">
@@ -82,7 +79,9 @@
                         <button class="selector__button">L</button>
                     </div>
                 </div>
-
+            </div>
+            
+            <div class="item__info-line">
                 <div class="selector item__color-selector">
                     <div class="selector__title">Цвет:</div>
                     <div class="selector__button-holder">
@@ -91,11 +90,19 @@
                         <button class="selector__button _bg-green" data-color="green"></button>
                     </div>
                 </div>
-
-                <button class="buy-button item__buy-button">Купить</button><br>
-
-                <a class="set-aside-button item__set-aside-button">Отложить на потом</a>
             </div>
+
+            <div class="item__info-line">
+                <button class="buy-button">Купить</button><br>
+            </div>
+
+            <div class="item__info-line">
+                <a class="set-aside-button">Отложить на потом</a>
+            </div>
+        </section>
+
+        <section class="item__preview-holder">
+            <img class="item__preview" src="./img/tee-white.png">
         </section>
 
 
