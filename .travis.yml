@@ -4,6 +4,7 @@ node_js:
 script:
   - npm run prod # Запускаем продакшен-сборку, скрипт из `package.json`
 deploy:
+  pro: true
   provider: pages # Используем возможности GithubPages
   skip_cleanup: true # Не чистим рабочую директорию
   # GITHUB_TOKEN — код, обеспечивающий интеграцию Тревиса и Гитхаба.
