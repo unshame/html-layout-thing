@@ -27,33 +27,36 @@
         padding-bottom: 64px;
     }
 
-    &__header {
-        margin: 0 0 12px;
+    &__group {
 
-        font-size: @fs-normal;
-        font-weight: bold;
-    }
+        &__header {
+            margin: 0 0 12px;
 
-    &__row {
-        display: flex;
-        flex-direction: row;
-    }
-
-    &__column {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        line-height: 26px;
-
-        &_first {
-            width: 180px;
+            font-size: @fs-normal;
+            font-weight: bold;
         }
-    }
 
-    &__link {
-        color: black;
-        text-decoration: none;
+        &__row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            line-height: 26px;
+
+            &_first {
+                width: 180px;
+            }
+        }
+
+        &__link {
+            color: black;
+            text-decoration: none;
+        }
     }
 
     &__badges {
@@ -95,7 +98,6 @@
     &__social-link {
         width: 34px;
         height: 34px;
-        line-height: 64px;
 
         &_facebook {
             background-image: url('../img/facebook.png');
