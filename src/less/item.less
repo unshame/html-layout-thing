@@ -1,0 +1,45 @@
+.item {
+
+    display: flex;
+    flex-direction: row;
+    
+    padding-top: 20px;
+
+    &_info {
+        flex: 1;
+    }
+
+    &__info-title {
+        margin: 0 0 16px 0;
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    &__info-description {
+        font-size: 14px;
+    }
+
+    &__info-price {
+        margin: 24px 0;
+        font-weight: bold;
+        font-size: 32px;
+        color: @color-accent;
+    }
+
+    &__buy-button {
+        margin: 30px 0;
+    }
+
+    &__preview-holder {
+        flex: 1;
+        min-width: 500px;
+        padding-right: 32px;
+        margin: 0;
+    }
+
+    &__preview {
+        max-width: 100%;
+    }
+    
+
+}

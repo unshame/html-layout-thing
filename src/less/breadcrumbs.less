@@ -1,0 +1,17 @@
+.breadcrumbs {
+
+    &__link {
+
+        &_current {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    &__wrapper {
+        &:not(:last-child):after {
+            content: '/';
+        }
+    }
+    
+}
