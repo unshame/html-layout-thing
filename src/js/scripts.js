@@ -9,12 +9,22 @@ function createSelectorControl(selector, onchange, initialIndex = 0) {
     onchange($curButton[0]);
 
     $buttons.click((e) => {
-        let button = e.target;
+        select(e.target);
+    });
+
+    function select(button) {
         $curButton.removeClass(styleCurrent);
         $curButton = $(button);
         $curButton.addClass(styleCurrent);
         onchange(button);
-    });
+    }
+
+    return {
+        elem: $elem,
+        select(i) {
+            select($buttons[i]);
+        }
+    };
 }
 
 let $preview = $('.item__preview');
