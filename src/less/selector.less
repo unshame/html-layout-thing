@@ -14,12 +14,14 @@
     &__button {
         width: 64px;
         height: 64px;
+        line-height: 64px - 2 * 4px;
+
         border: @border-selector;
         border-width: 2px;
+
         background: @color-bg;
-        cursor: pointer;
-        line-height: 64px - 2 * 4px;
         font-size: @fs-title;
+        cursor: pointer;
 
         &_current {
             border-color: @color-accent;

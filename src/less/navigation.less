@@ -1,6 +1,8 @@
+@navigation-height: 50px;
+
 .navigation {
     width: 100%;
-    height: 50px;
+    height: @navigation-height;
 
     border-top: @border-section;
     border-bottom: @border-section;
@@ -10,34 +12,39 @@
     background: @color-section-bg;
 
     &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
         width: 100%;
-        height: 100%;
         max-width: @max-w;
+        height: 100%;
+
         margin: auto;
         padding: 0 @content-padding;
     }
 
     &__links {
-        float: left;
-        height: 100%;
-        line-height: 50px;
+        line-height: @navigation-height;
+
+        text-align: left;
     }
 
     &__link {
-
         display: inline-block;
+
         margin-right: 20px;
 
         &_current {
             color: black;
-            text-decoration: none;
             font-weight: bold;
+            text-decoration: none;
         }
     }
 
     &__search-wrapper {
-        height: 100%;
-        float: right;
-        padding: 6px 0;      
+        padding: 6px 0;
+ 
+        text-align: right;
     }
 }
