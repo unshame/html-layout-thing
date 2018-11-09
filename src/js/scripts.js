@@ -27,8 +27,22 @@ function createSelectorControl(selector, onchange, initialIndex = 0) {
     };
 }
 
+function getImageUrl(color) {
+    return './img/tee-' + color + '.png';
+}
+
+function preloadColors() {
+    let $buttons = $('.item__color-selector .selector__button');
+    $buttons.each((i, button) => {
+        let img = new Image();
+        img.src = getImageUrl(button.dataset.color);
+    });
+}
+
+preloadColors();
+
 let $preview = $('.item__preview');
 createSelectorControl('.item__size-selector', () => {});
 createSelectorControl('.item__color-selector', (button) => {
-    $preview.attr('src', './img/tee-' + button.dataset.color + '.png');
+    $preview.attr('src', getImageUrl(button.dataset.color));
 });
