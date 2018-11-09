@@ -3,31 +3,40 @@
 
 /* # Setup devices width */
 // ## Minimum values for device width
-@xs-min: 320px; // extra small
+@xs-min: 540px; // extra small
 @sm-min: 768px; // small
 @md-min: 992px; // middle
 @lg-min: 1200px; // large
 
 // ## Maximum values for device width
+@xxs-max: (@xs-min - 1);
 @xs-max: (@sm-min - 1); // extra small
 @sm-max: (@md-min - 1); // small
 @md-max: (@lg-min - 1); // middle
 
 /* # Variables for mobile first approach and strict ranges */
-@phone: ~'only screen and (min-width: @{xs-min})';
-@phone-strict: ~'only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})';
+@less-than-phone: ~'only screen and (max-width: @{xxs-max})';
 
-@tablet: ~'only screen and (min-width: @{sm-min})';
-@tablet-strict: ~'only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})';
+@at-least-phone: ~'only screen and (min-width: @{xs-min})';
+@at-most-phone: ~'only screen and (max-width: @{xs-max})';
+@between-phone-tablet: ~'only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})';
+@between-phone-desktop: ~'only screen and (min-width: @{xs-min}) and (max-width: @{sm-max})'; 
+@between-phone-large: ~'only screen and (min-width: @{xs-min}) and (max-width: @{md-max})'; 
 
-@desktop: ~'only screen and (min-width: @{md-min})';
-@desktop-strict: ~'only screen and (min-width: @{md-min}) and (max-width: @{md-max})';
-
-@large: ~'only screen and (min-width: @{lg-min})';
-
-
-@at-most-desktop: ~'only screen and (max-width: @{md-max})';
+@at-least-tablet: ~'only screen and (min-width: @{sm-min})';
 @at-most-tablet: ~'only screen and (max-width: @{sm-max})';
+@between-tablet-desktop: ~'only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})';
+@between-tablet-large: ~'only screen and (min-width: @{sm-min}) and (max-width: @{md-max})'; 
+
+@at-least-desktop: ~'only screen and (min-width: @{md-min})';
+@at-most-desktop: ~'only screen and (max-width: @{md-max})';
+@between-desktop-large: ~'only screen and (min-width: @{md-min}) and (max-width: @{md-max})';
+
+@at-least-large: ~'only screen and (min-width: @{lg-min})';
+@at-most-large: ~'only screen and (min-width: @{md-max})';
+
+
+
 
 // Это служебный файл, никакие стили тут писать не нужно.
 // Задача этого файла — объявить переменные для медиа-запросов.

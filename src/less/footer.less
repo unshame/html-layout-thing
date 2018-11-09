@@ -1,3 +1,5 @@
+@fixed-column-height: 140px;
+
 .footer {
     
     width: 100%;
@@ -27,31 +29,30 @@
         @added-height: 104px;
         @padding: 64px;
 
-        height: @height;
-
         padding-bottom: @padding;
 
-        @media @at-most-desktop {
-            height:  @added-height + @height;
-            padding-bottom:  @added-height + @padding;
+        @media @between-phone-desktop {
+            flex-wrap: wrap;
+            justify-content: left;
         }
 
-        @media @at-most-tablet {
-            flex-wrap: wrap;
+        @media @less-than-phone {
+            flex-direction: column;
         }
     }
 
     &__group {
         flex: 1;
 
-        @media @at-most-desktop {
+        @media @between-desktop-large {
             flex: 0.6;
         }
 
         @media @at-most-tablet {
+            padding-bottom: 32px;
             flex-basis: 50%;
         }
-        
+
         &__header {
             margin: 0 0 12px;
 
@@ -62,10 +63,7 @@
         &__row {
             display: flex;
             flex-direction: row;
-
-            @media @at-most-desktop {
-                flex-direction: column;
-            }
+            flex-wrap: wrap;
         }
 
         &__column {
@@ -77,6 +75,10 @@
 
             &_first {
                 width: 175px;
+            }
+
+            &_second {
+                width: 190px;
             }
         }
 
@@ -92,7 +94,11 @@
         flex-direction: column;
         justify-content: space-between;
 
-        height: 100%;
+        height: @fixed-column-height;
+
+        @media @at-most-phone {
+            margin-bottom: 32px;
+        }
     }
 
     &__badge {
@@ -120,7 +126,21 @@
         flex-direction: column;
         justify-content: space-between;
 
-        height: 100%;
+        height: @fixed-column-height;
+
+        @media @between-tablet-desktop {
+            flex-basis: 50%;
+        }
+
+        @media @between-phone-tablet {
+            flex-basis: 25%;
+        }
+
+        @media @less-than-phone {
+            flex-direction: row;
+
+            height: auto;
+        }
     }
 
     &__social-link {
