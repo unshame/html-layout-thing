@@ -1,20 +1,15 @@
-// See this thread for better explanation:
-// http://stackoverflow.com/questions/15837808/fancy-media-queries-with-some-less-magic
-
-/* # Setup devices width */
-// ## Minimum values for device width
-@xs-min: 540px; // extra small
-@sm-min: 768px; // small
-@md-min: 992px; // middle
+// Minimum values for device width
+@xs-min: 540px;  // extra small
+@sm-min: 768px;  // small
+@md-min: 992px;  // middle
 @lg-min: 1200px; // large
 
-// ## Maximum values for device width
-@xxs-max: (@xs-min - 1);
-@xs-max: (@sm-min - 1); // extra small
-@sm-max: (@md-min - 1); // small
-@md-max: (@lg-min - 1); // middle
+// Maximum values for device width
+@xxs-max: (@xs-min - 1); // extra extra small
+@xs-max: (@sm-min - 1);  // extra small
+@sm-max: (@md-min - 1);  // small
+@md-max: (@lg-min - 1);  // middle
 
-/* # Variables for mobile first approach and strict ranges */
 @less-than-phone: ~'only screen and (max-width: @{xxs-max})';
 
 @at-least-phone: ~'only screen and (min-width: @{xs-min})';
