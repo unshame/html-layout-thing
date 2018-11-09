@@ -32,6 +32,9 @@ module.exports = {
         'semi': [
             'error',
             'always'
+        ],
+        'no-unused-vars': [
+            'warn'
         ]
     },
     'parserOptions': {

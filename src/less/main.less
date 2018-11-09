@@ -3,13 +3,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @max-w: 1400px;
+@content-padding: 20px;
 
 @color-bg: #FFFFFF;
 @color-section-bg: #F4F5EF;
 @color-section-border: #D9D9D4;
+@color-selector-border: #888888;
 @color-accent: #CE0000;
 
 @border-section: 1px solid @color-section-border;
+@border-selector: 2px solid @color-selector-border;
 
 * {
     box-sizing: border-box;
@@ -45,7 +48,7 @@ a {
 
     max-width: @max-w;
 
-    padding: 19px 0;
+    padding: 19px @content-padding;
     line-height: 49px;
 
     font-size: 32px;
@@ -53,7 +56,7 @@ a {
     color: @color-accent;
 
     &__title {
-        flex: 1;
+        flex: 2;
         text-align: left;
         font-family: 'Consolas', 'Roboto', sans-serif;
     }
@@ -64,7 +67,7 @@ a {
     }
 
     &__contacts {
-        flex: 1;
+        flex: 2;
         text-align: right;
     }
 }
@@ -72,6 +75,7 @@ a {
 .navigation {
     width: 100%;
     height: 50px;
+
     border-top: @border-section;
     border-bottom: @border-section;
 
@@ -84,6 +88,7 @@ a {
         height: 100%;
         max-width: @max-w;
         margin: auto;
+        padding: 0 @content-padding;
     }
 
     &__links {
@@ -109,32 +114,37 @@ a {
         float: right;
         padding: 6px 0;      
     }
+}
 
-    &__search {
-        position: relative;
-        width: 276px;
-        height: 38px;
-        background: @color-bg;
-        border: @border-section;
-    }
+.search-form {
+    position: relative;
+    width: 276px;
+    height: 38px;
+    background: @color-bg;
+    border: @border-section;
 
-    &__search-text-field {
+
+    &__text-field {
         width: 100%;
         height: 100%;
         border: 0;
-        padding-right: 32px;
+        padding-right: 32px + 12px;
+        padding-left: 12px;
     }
 
-    &__search-submit-button {
+    &__submit-button {
         position: absolute;
         right: 0;
         top: 0;
         width: 32px;
         height: 36px;
         border: 0;
-        background: transparent;
+        background: url('../img/search.png') transparent no-repeat;
+        background-position: 8px 10px;
+        cursor: pointer;
     }
 }
+
 
 .content {
     flex: 1;
@@ -142,7 +152,7 @@ a {
     width: 100%;
     max-width: @max-w;
 
-    padding: 50px 0 120px;
+    padding: 50px @content-padding 120px;
 }
 
 .breadcrumbs {
@@ -160,8 +170,131 @@ a {
             content: '/';
         }
     }
-
     
+}
+
+
+.item {
+
+    display: flex;
+    flex-direction: row;
+    
+    padding-top: 20px;
+
+    &_info {
+        flex: 1;
+    }
+
+    &__info-title {
+        margin: 0 0 16px 0;
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    &__info-description {
+        font-size: 14px;
+    }
+
+    &__info-price {
+        margin: 24px 0;
+        font-weight: bold;
+        font-size: 32px;
+        color: @color-accent;
+    }
+
+    &__buy-button {
+        margin: 30px 0;
+    }
+
+    &__preview-holder {
+        flex: 1;
+        padding-right: 32px;
+        margin: 0;
+    }
+
+    &__preview {
+        max-width: 100%;
+    }
+    
+
+}
+
+.selector {
+
+    padding: 4px 0 8px;
+
+
+    &__title {
+        font-size: 14px;
+    }
+
+    &__button-holder {
+        padding: 6px 0;
+    }
+
+    &__button {
+        width: 64px;
+        height: 64px;
+        border: @border-selector;
+        border-width: 2px;
+        background: @color-bg;
+        cursor: pointer;
+        line-height: 64px - 2 * 4px;
+        font-size: 32px;
+
+        &_current {
+            border-color: @color-accent;
+        }
+    }
+}
+
+.buy-button {
+    width: 202px;
+    height: 80px;
+    border: 0;
+    text-align: center;
+    background: @color-accent;
+    color: @color-bg;
+    font-size: 28px;
+    cursor: pointer;
+
+    &:active {
+        padding-top: 4px;
+    }
+}
+
+.set-aside-button {
+    position: relative;
+    text-decoration: underline;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: @color-selector-border;
+    cursor: pointer;
+    padding-left: 32px;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 28px;
+        height: 25px;
+        background: url('../img/heart.png');
+
+    }
+}
+
+._bg-white {
+    background-color: #FFFBFC;
+}
+._bg-yellow {
+    background-color: #E2DA53;
+}
+._bg-green {
+    background-color: #A5AF96;
 }
 
 .footer {
@@ -176,11 +309,94 @@ a {
     &__wrapper {
         width: 100%;
         max-width: @max-w;
+        padding: 0 @content-padding;
         margin: auto;
     }
 
     &__links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 64px;
+    }
 
+    &__header {
+        margin: 0 0 12px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 24px;
+
+        &_first {
+            width: 180px;
+        }
+    }
+
+    &__link {
+        color: black;
+        text-decoration: none;
+    }
+
+    &__badges {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 140px;
+    }
+
+    &__badge {
+        font-size: 16px;
+        padding-left: 60px;
+        background-repeat: no-repeat;
+
+        &_delivery {
+            background-image: url(../img/delivery.png);
+        }
+
+        &_trial {
+            background-image: url(../img/trial.png);
+        }       
+        
+        &_deals {
+            background-image: url(../img/deals.png);
+        }
+    }
+
+
+
+    &__social-media {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 140px;
+    }
+
+    &__social-link {
+        width: 34px;
+        height: 34px;
+        line-height: 64px;
+
+        &_facebook {
+            background-image: url('../img/facebook.png');
+        }
+        
+        &_twitter {
+            background-image: url('../img/twitter.png');
+        }
+
+        &_instagram {
+            background-image: url('../img/instagram.png');
+        }
     }
 
     &__summary {

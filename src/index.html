@@ -27,9 +27,9 @@
             <a class="navigation__link" href="/PHP">PHP</a>
         </div>
         <div class="navigation__search-wrapper">
-            <form class="navigation__search">
-                <input class="navigation__search-text-field" type="text">
-                <input class="navigation__search-submit-button" type="submit" value="">
+            <form class="search-form">
+                <input class="search-form__text-field" type="text">
+                <input class="search-form__submit-button" type="submit" value="">
             </form>
         </div>
     </div>
@@ -50,28 +50,41 @@
 
     <article class="item">
 
+        <section class="item__preview-holder">
+            <img class="item__preview" src="./img/tee-yellow.png">
+        </section>
+
         <section class="item__info">
-            <h1 class="title">Футболка Программистского Юмора</h1>
-            <div class="description">Состав: 100% хлопок. Свойства: +2 скилу программирования, -5 к чувству юмора. Производство: Россия.</div>
-            <div class="price">1500Р</div>
+            <h1 class="item__info-title">Футболка Программистского Юмора</h1>
+            <div class="item__info-description">Состав: 100% хлопок. Свойства: +2 скилу программирования, -5 к чувству юмора. Производство: Россия.</div>
+            <div class="item__info-price">1500Р</div>
+
+            <section class="item__controls">
+
+                <div class="selector item__size-selector">
+                    <div class="selector__title">Размер:</div>
+                    <div class="selector__button-holder">
+                        <button class="selector__button">S</button>
+                        <button class="selector__button">M</button>
+                        <button class="selector__button">L</button>
+                    </div>
+                </div>
+
+                <div class="selector item__color-selector">
+                    <div class="selector__title">Цвет:</div>
+                    <div class="selector__button-holder">
+                        <button class="selector__button _bg-white" data-color="white"></button>
+                        <button class="selector__button _bg-yellow" data-color="yellow"></button>
+                        <button class="selector__button _bg-green" data-color="green"></button>
+                    </div>
+                </div>
+
+                <button class="buy-button item__buy-button">Купить</button><br>
+
+                <a class="set-aside-button item__set-aside-button">Отложить на потом</a>
+            </section>
         </section>
 
-        <section class="item__controls">
-
-            <div class="selector item__size-selector">
-                <div class="selector__title"></div>
-            </div>
-
-            <div class="selector item__color-selector">
-                <div class="selector__title"></div>
-            </div>
-
-            <button class="buy-button item__buy-button">Купить</button>
-
-            <a class="set-aside-button item__set-aside-button"></a>
-        </section>
-
-        <figure class="item__preview"></figure>
 
     </article>
 </main>
@@ -79,10 +92,49 @@
 <footer class="footer">
     <div class="footer__wrapper">
         <section class="footer__links">
-            <div class="footer__group footer__group_support"></div>
-            <div class="footer__group footer__group_about"></div>
-            <div class="footer__badges"></div>
-            <div class="footer__social-media"></div>
+            <div class="footer__group footer__group_support">
+                <h3 class="footer__header">Сервис и поддержка</h3>
+                <div class="footer__row">
+                    <div class="footer__column footer__column_first">
+                        <a class="footer__link" href="/">Как сделать заказ</a>
+                        <a class="footer__link" href="/">Возврат товара</a>
+                        <a class="footer__link" href="/">Публичная оферта</a>
+                        <a class="footer__link" href="/">Доставка</a>
+                    </div>
+                    <div class="footer__column footer__column_second">
+                        <a class="footer__link" href="/">Способы оплаты</a>
+                        <a class="footer__link" href="/">Правила продажи</a>
+                        <a class="footer__link" href="/">Возврат денежных средств</a>
+                        <a class="footer__link" href="/">Вопросы и ответы</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__group footer__group_about">
+                <h3 class="footer__header">О компании</h3>
+                <div class="footer__row">
+                    <div class="footer__column footer__column_first">
+                        <a class="footer__link" href="/">О нас</a>
+                        <a class="footer__link" href="/">Контакты</a>
+                        <a class="footer__link" href="/">Вакансии</a>
+                        <a class="footer__link" href="/">Партнерам</a>
+                    </div>
+                    <div class="footer__column footer__column_second">
+                        <a class="footer__link" href="/">Сертификаты</a>
+                        <a class="footer__link" href="/">Преимущества</a>
+                        <a class="footer__link" href="/">Наши скидки</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__badges">
+                <div class="footer__badge footer__badge_delivery">бесплатная доставка от 4000 Р</div>
+                <div class="footer__badge footer__badge_trial">пробники в подарок при каждой покупке</div>
+                <div class="footer__badge footer__badge_deals">акции и подарки за покупку</div>
+            </div>
+            <div class="footer__social-media">
+                <a class="footer__social-link footer__social-link_facebook" href="/"></a>
+                <a class="footer__social-link footer__social-link_twitter" href="/"></a>
+                <a class="footer__social-link footer__social-link_instagram" href="/"></a>
+            </div>
         </section>
         <section class="footer__summary">
             2005-2018 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.<br>
@@ -91,6 +143,7 @@
     </div>
 </footer>
 
+<script src="js/jquery.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
