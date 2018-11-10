@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:title" content="7h3 5h0p">
     <meta property="og:description" content="Модный интернет-магазин одежды, обуви и аксессуаров.">
-    <meta property="og:image" content="./img/tee-white.png">
+    <meta property="og:image" content="https://unshame.github.io/html-layout-thing/img/tee-white.png">
     <title>7h3 5h0p</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -46,8 +46,8 @@
         </div>
         <div class="navigation__search-wrapper">
             <form class="search-form">
-                <input class="search-form__text-field" type="text">
-                <input class="search-form__submit-button" type="submit" value="">
+                <input class="search-form__text-field" type="text" aria-label="Search Field">
+                <input class="search-form__submit-button" type="submit" value="" aria-label="Search">
             </form>
         </div>
     </div>
@@ -92,9 +92,9 @@
                         <div class="selector item__color-selector">
                             <div class="selector__title">Цвет:</div>
                             <div class="selector__button-holder">
-                                <button class="selector__button _bg-white" data-color="white"></button>
-                                <button class="selector__button _bg-yellow" data-color="yellow"></button>
-                                <button class="selector__button _bg-green" data-color="green"></button>
+                                <button class="selector__button _bg-white" data-color="white" aria-label="white"></button>
+                                <button class="selector__button _bg-yellow" data-color="yellow" aria-label="yellow"></button>
+                                <button class="selector__button _bg-green" data-color="green" aria-label="green"></button>
                             </div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
         </section>
 
         <section class="item__preview-holder">
-            <img class="item__preview" src="./img/tee-white.png">
+            <img class="item__preview" src="./img/tee-white.png" alt="Футболка Программистского Юмора">
         </section>
 
 
