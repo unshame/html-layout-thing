@@ -34,8 +34,8 @@ function getImageUrl(color) {
     return './img/tee-' + color + '.png';
 }
 
-let $preview = $('.item__preview');
+let preview = document.querySelector('.item__preview');
 createSelectorControl('.item__size-selector', () => {});
 createSelectorControl('.item__color-selector', (button) => {
-    $preview.attr('src', getImageUrl(button.dataset.color));
+    preview.src = getImageUrl(button.dataset.color);
 });
