@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="Модный интернет-магазин одежды, обуви и аксессуаров.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="7h3 5h0p">
+    <meta property="og:description" content="Модный интернет-магазин одежды, обуви и аксессуаров.">
+    <meta property="og:image" content="https://unshame.github.io/html-layout-thing/img/tee-white.png">
+    <title>7h3 5h0p</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__title">
+        <a class="header__title-link" href="/">7h3 5h0p</a>
+    </div>
+    <div class="header__logo-wrapper">
+        <a class="header__logo-link" href="/">
+            <img class="header__logo" src="./img/logo.png" alt="7h3 5h0p Логотип" title="7h3 5h0p">
+        </a>
+    </div>
+    <div class="header__contacts">+7 (812) 2•12•85•06</div>
+</header>
+
+<nav class="navigation">
+    <div class="navigation__wrapper">
+        <div class="navigation__links">
+            <div class="navigation__link-wrapper">
+                <a class="navigation__link navigation__link_current" href="/">LISP</a>
+            </div>
+            <div class="navigation__link-wrapper">
+                <a class="navigation__link" href="/">OCaml</a>
+            </div>
+            <div class="navigation__link-wrapper">
+                <a class="navigation__link" href="/">JavaScript</a>
+            </div>
+            <div class="navigation__link-wrapper">            
+                <a class="navigation__link" href="/">Python</a>
+            </div>
+            <div class="navigation__link-wrapper">            
+                <a class="navigation__link" href="/">PHP</a>
+            </div>
+            
+        </div>
+        <div class="navigation__search-wrapper">
+            <form class="search-form">
+                <input class="search-form__text-field" type="text" aria-label="Search Field">
+                <input class="search-form__submit-button" type="submit" value="" aria-label="Search">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<main class="content">
+    <nav class="breadcrumbs">
+        <span class="breadcrumbs__wrapper">
+            <a class="breadcrumbs__link" href="/">LISP</a>
+        </span>
+        <span class="breadcrumbs__wrapper">
+            <a class="breadcrumbs__link" href="/">Одежда</a>
+        </span>
+        <span class="breadcrumbs__wrapper">
+            <a class="breadcrumbs__link breadcrumbs__link_current" href="/Футболки">Футболки</a>
+        </span>
+    </nav>
+
+    <article class="item">
+
+        <section class="item__info">
+            <h1 class="item__info-title">Футболка Программистского Юмора</h1>
+            <div class="item__info-description">Состав: 100% хлопок. Свойства: +2 к скилу программирования, -5 к чувству юмора. Производство: Россия.</div>
+            <div class="item__info-line">
+                <div class="item__info-price">1500 ₽</div>
+            </div>
+
+            <div class="item__controls">
+                <div class="item__selectors">
+                    <div class="item__info-line">
+                        <div class="selector item__size-selector">
+                            <div class="selector__title">Размер:</div>
+                            <div class="selector__button-holder">
+                                <button class="selector__button">S</button>
+                                <button class="selector__button">M</button>
+                                <button class="selector__button">L</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="item__info-line">
+                        <div class="selector item__color-selector">
+                            <div class="selector__title">Цвет:</div>
+                            <div class="selector__button-holder">
+                                <button class="selector__button _bg-white" data-color="white" aria-label="white"></button>
+                                <button class="selector__button _bg-yellow" data-color="yellow" aria-label="yellow"></button>
+                                <button class="selector__button _bg-green" data-color="green" aria-label="green"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item__buttons">
+                    <div class="item__info-line">
+                        <button class="buy-button">Купить</button><br>
+                    </div>
+
+                    <div class="item__info-line">
+                        <a class="set-aside-button">Отложить на потом</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="item__preview-holder">
+            <img class="item__preview" src="./img/tee-white.png" alt="Футболка Программистского Юмора">
+        </section>
+
+
+    </article>
+</main>
+
+<footer class="footer">
+
+    <div class="footer__wrapper">
+
+        <section class="footer__links">
+
+            <div class="footer-group footer-group_support">
+                <h3 class="footer-group__header">Сервис и поддержка</h3>
+                <div class="footer-group__row">
+                    <div class="footer-group__column footer-group__column_first">
+                        <a class="footer-group__link" href="/">Как сделать заказ</a>
+                        <a class="footer-group__link" href="/">Возврат товара</a>
+                        <a class="footer-group__link" href="/">Публичная оферта</a>
+                        <a class="footer-group__link" href="/">Доставка</a>
+                    </div>
+                    <div class="footer-group__column footer-group__column_second">
+                        <a class="footer-group__link" href="/">Способы оплаты</a>
+                        <a class="footer-group__link" href="/">Правила продажи</a>
+                        <a class="footer-group__link" href="/">Возврат денежных средств</a>
+                        <a class="footer-group__link" href="/">Вопросы и ответы</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-group footer-group_about">
+                <h3 class="footer-group__header">О компании</h3>
+                <div class="footer-group__row">
+                    <div class="footer-group__column footer-group__column_first">
+                        <a class="footer-group__link" href="/">О нас</a>
+                        <a class="footer-group__link" href="/">Контакты</a>
+                        <a class="footer-group__link" href="/">Вакансии</a>
+                        <a class="footer-group__link" href="/">Партнерам</a>
+                    </div>
+                    <div class="footer-group__column footer-group__column_second">
+                        <a class="footer-group__link" href="/">Сертификаты</a>
+                        <a class="footer-group__link" href="/">Преимущества</a>
+                        <a class="footer-group__link" href="/">Наши скидки</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__badges">
+                <div class="footer__badge footer__badge_delivery">бесплатная доставка от 4000 ₽</div>
+                <div class="footer__badge footer__badge_trial">пробники в подарок при каждой покупке</div>
+                <div class="footer__badge footer__badge_deals">акции и подарки за покупку</div>
+            </div>
+
+            <div class="footer__social-media">
+                <a class="footer__social-link footer__social-link_facebook" href="/" title="Мы на Facebook"></a>
+                <a class="footer__social-link footer__social-link_twitter" href="/" title="Мы в Twitter"></a>
+                <a class="footer__social-link footer__social-link_instagram" href="/" title="Мы на Instagram"></a>
+            </div>
+        </section>
+
+        <section class="footer__summary">
+            2005-2018 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.<br>
+            Все права защищены. Доставка по всей России!
+        </section>
+    </div>
+</footer>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
